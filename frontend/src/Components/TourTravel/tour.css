@@ -1,0 +1,398 @@
+/* Search Container Styles */
+.tt-search-container {
+    background: linear-gradient(45deg, #523f66, #2575fc);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+}
+
+.tt-search-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Heading Style */
+.tt-heading {
+    color: white;
+    font-size: 2.2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 50px;
+    width: 100%;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Form styling */
+.tt-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    gap: 20px;
+}
+
+/* Input Group Styling */
+.tt-input-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 180px;
+    transition: all 0.3s ease;
+}
+
+.tt-input-group:hover {
+    transform: scale(1.02);
+}
+
+/* Input field styling */
+.tt-input-field {
+    padding: 15px 0px;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    font-size: 1.1rem;
+    transition: all 0.3s ease-in-out;
+    outline: none;
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.tt-input-field:focus {
+    border-color: #4f83cc;
+    box-shadow: 0 0 0 3px rgba(79, 131, 204, 0.2);
+}
+
+.tt-input-field::placeholder {
+    color: #888;
+}
+
+/* Label styling */
+.tt-label {
+    color: white;
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 6px;
+}
+
+/* Button styling */
+.tt-button {
+    padding: 16px 30px;
+    background-color: #4f83cc;
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 700;
+    border-radius: 12px;
+    letter-spacing: 5px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    margin-top: 20px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.search-icon {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+    margin: 0 auto;
+}
+
+.tt-button:hover {
+    background-color: #2575fc;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px);
+}
+
+.tt-button:active {
+    background-color: #1f64e4;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transform: translateY(0);
+}
+
+/* Search Results Styles */
+.tt-tour-results {
+    padding: 50px 20px;
+    background: linear-gradient(180deg, #f7f9fc, #e8eef5);
+    border-radius: 16px;
+    margin: 30px auto;
+    max-width: 1400px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.tt-tour-results .tt-heading {
+    color: #523f66;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+/* Tour Card Styling */
+.tour-card {
+    background: linear-gradient(145deg, #ffffff, #f0f4ff);
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    animation: fadeInUp 0.6s ease-out forwards;
+    max-width: 280px;
+    width: 100%;
+}
+
+.tour-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    border: 2px solid #2575fc;
+}
+
+.tour-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: linear-gradient(90deg, #523f66, #2575fc);
+    transition: all 0.4s ease;
+}
+
+.tour-card:hover::before {
+    height: 12px;
+}
+
+/* Tour Card Banner (Placeholder for Image) */
+.tour-card-banner {
+    height: 100px;
+    background: linear-gradient(45deg, #523f66, #2575fc);
+    border-radius: 12px 12px 0 0;
+    margin: -20px -20px 15px -20px;
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+}
+
+.tour-card:hover .tour-card-banner {
+    opacity: 1;
+}
+
+.tour-card h3 {
+    color: #523f66;
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.tour-card p {
+    color: #444;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.tour-card p strong {
+    color: #333;
+    font-weight: 700;
+}
+
+.tour-card div {
+    margin-top: 10px;
+}
+
+.tour-card div strong {
+    color: #523f66;
+    font-size: 1.1rem;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.tour-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tour-card ul li {
+    color: #555;
+    font-size: 0.9rem;
+    padding-left: 5px;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Icon Styling */
+.tour-card-icon {
+    color: #4f83cc;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+    background: #e8eef5;
+    border-radius: 50%;
+    padding: 5px;
+    transition: all 0.3s ease;
+}
+
+.tour-card:hover .tour-card-icon {
+    color: #2575fc;
+    background: #d4e0ff;
+}
+
+/* Button Container */
+.tour-card-buttons {
+    display: flex;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+/* Book Now Button */
+.tour-card-button {
+    flex: 1;
+    padding: 10px;
+    background: linear-gradient(90deg, #4f83cc, #2575fc);
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
+}
+
+.tour-card-button:hover {
+    background: linear-gradient(90deg, #2575fc, #4f83cc);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.tour-card-button:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Details Button */
+.tour-card-details-button {
+    flex: 1;
+    padding: 10px;
+    background: linear-gradient(90deg, #523f66, #745d8a);
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
+}
+
+.tour-card-details-button:hover {
+    background: linear-gradient(90deg, #745d8a, #523f66);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.tour-card-details-button:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Fade In Animation for Cards */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Loading State */
+.tt-loading {
+    text-align: center;
+    color: #523f66;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 30px 0;
+    animation: pulse 1.5s infinite;
+}
+
+/* Pulse Animation for Loading */
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+/* Responsive Design for Smaller Screens */
+@media screen and (max-width: 768px) {
+    .tt-search-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .tt-form {
+        flex-direction: column;
+    }
+
+    .tt-input-group {
+        min-width: 100%;
+    }
+
+    .tt-button {
+        width: 100%;
+    }
+
+    .tt-tour-results {
+        padding: 30px 15px;
+        gap: 15px;
+    }
+
+    .tour-card {
+        padding: 15px;
+        max-width: 100%;
+    }
+
+    .tour-card h3 {
+        font-size: 1.6rem;
+    }
+
+    .tour-card-icon {
+        font-size: 1rem;
+        padding: 4px;
+    }
+
+    .tour-card-banner {
+        height: 80px;
+        margin: -15px -15px 12px -15px;
+    }
+
+    .tour-card-buttons {
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .tour-card-button,
+    .tour-card-details-button {
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+}

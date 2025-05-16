@@ -1,0 +1,152 @@
+.footer {
+  color: #d9d9d9;
+  background-color: #323232;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 8vw;
+  padding-top: 80px;
+  margin-top: 90px;
+}
+.footer-content {
+  width: 100%;
+  display: flex;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 50px;
+  position: relative; /* Added to position scroll-to-top button */
+}
+.footer-content-left,
+.footer-content-center,
+.footer-content-right {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 20px;
+}
+.footer-content-left li,
+.footer-content-center li,
+.footer-content-right li {
+  list-style: none;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.footer-content-center h2,
+.footer-content-right h2 {
+  color: white;
+}
+.footer-social-icons img {
+  width: 40px;
+  margin-right: 10px;
+}
+.footer hr {
+  width: 100%;
+  height: 1px;
+  background-color: gray;
+  border: none;
+}
+.scroll-to-top {
+  position: absolute;
+  top: -70px;
+  right: -110px;
+  background-color: #d9d9d9; /* Matches footer text color */
+  color: #323232; /* Matches footer background */
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s, transform 0.3s;
+}
+.scroll-to-top:hover {
+  background-color: green; /* Slightly brighter on hover */
+  transform: scale(1.1);
+  color: white;
+}
+.scroll-to-top svg {
+  font-size: 20px; /* Adjust icon size */
+}
+@media (max-width: 750px) {
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+  }
+  .footer-copyright {
+    text-align: center;
+  }
+  .scroll-to-top {
+    top: -70px;
+    right: 10px;
+  }
+}
+@media (max-width: 1024px) and (min-width: 751px) {
+  .scroll-to-top {
+    top: -70px; /* Matches desktop and mobile */
+    right: 20px; /* Adjusted for tablet screen width */
+  }
+}
+@media (min-width: 1201px) {
+  .scroll-to-top {
+    top: -70px; /* Consistent vertical position */
+    right: -80px; /* Closer to content for large screens */
+  }
+}
+
+/* Additional styles for complete responsiveness */
+.footer-content {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  justify-content: space-between; /* Better spacing */
+}
+
+.footer-content-left {
+  flex: 2;
+  min-width: 250px; /* Prevent squashing on medium screens */
+}
+
+.footer-content-center,
+.footer-content-right {
+  flex: 1;
+  min-width: 150px; /* Ensure readability */
+}
+
+.footer-content-center a {
+  color: #d9d9d9;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-content-center a:hover {
+  color: #ffffff; /* Brighter on hover for visibility */
+}
+
+.footer-social-icons {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Consistent spacing */
+  border-radius: 50%;
+
+}
+.payment-image {
+min-width:450px;
+  margin-top: 5px;
+  height: auto;
+}
+
+
+.footer-copyright {
+  font-size: 0.9rem;
+  color: #d9d9d9;
+  text-align: center;
+}
+.footer-logo {
+  width: 120px;
+  
+  height: 150px;
+  margin-bottom:-60px;
+}

@@ -1,0 +1,319 @@
+/* Navbar container */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(45deg, #007bff, #00c6ff);
+    padding: 15px 30px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    height: 100px;
+}
+
+/* Logo Section */
+.logo {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.logo-image {
+  width: auto;               /* Maintain aspect ratio */
+  height: 120px;              /* Increased height */
+  margin-right: 20px;
+  object-fit: contain;
+  transition: transform 0.3s ease-in-out;
+}
+
+
+/* Optional: zoom on hover */
+.logo:hover .logo-image {
+  transform: scale(1.1);
+}
+
+
+
+/* Navigation links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+/* Hover effect for links */
+.nav-links a:hover {
+    color: #ffdd57;
+}
+
+/* Underline animation */
+.nav-links a::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 0;
+    background: #ffdd57;
+    transition: width 0.3s ease-in-out;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* Flag Dropdown */
+.flag-dropdown {
+    position: relative;
+    cursor: pointer;
+}
+
+.flag-dropdown-toggle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 5px;
+    transition: color 0.3s ease;
+}
+
+.flag-dropdown-toggle:hover {
+    color: #ffdd57;
+}
+
+.flag-icon {
+    display: inline-block;
+    width: 24px;
+    height: 16px;
+    background-size: cover;
+}
+
+.flag-icon-us {
+    background-image: url('https://flagcdn.com/w20/us.png');
+}
+
+.flag-icon-uk {
+    background-image: url('https://flagcdn.com/w20/gb.png');
+}
+
+.flag-icon-ca {
+    background-image: url('https://flagcdn.com/w20/ca.png');
+}
+
+.flag-icon-au {
+    background-image: url('https://flagcdn.com/w20/au.png');
+}
+
+.flag-icon-in {
+    background-image: url('https://flagcdn.com/w20/in.png');
+}
+
+.flag-icon-np {
+    background-image: url('https://flagcdn.com/w20/np.png');
+}
+
+.flag-icon-jp {
+    background-image: url('https://flagcdn.com/w20/jp.png');
+}
+
+.flag-icon-cn {
+    background-image: url('https://flagcdn.com/w20/cn.png');
+}
+
+.flag-icon-ru {
+    background-image: url('https://flagcdn.com/w20/ru.png');
+}
+
+.flag-icon-fr {
+    background-image: url('https://flagcdn.com/w20/fr.png');
+}
+
+.flag-icon-de {
+    background-image: url('https://flagcdn.com/w20/de.png');
+}
+
+.flag-icon-th {
+    background-image: url('https://flagcdn.com/w20/th.png');
+}
+
+.flag-icon-id {
+    background-image: url('https://flagcdn.com/w20/id.png');
+}
+
+.flag-dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    list-style: none;
+    padding: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    width: 200px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 1000;
+}
+
+.flag-dropdown:hover .flag-dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.flag-dropdown-menu li {
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    transition: background 0.3s ease;
+}
+
+.flag-dropdown-menu li a {
+    color: #333;
+    font-size: 1rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.flag-dropdown-menu li:hover {
+    background: #007bff;
+}
+
+.flag-dropdown-menu li:hover a {
+    color: white;
+}
+
+/* Dropdown Menu for Profile */
+.dropdown {
+    position: relative;
+    cursor: pointer;
+}
+
+.dropdown-toggle {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 5px;
+    transition: color 0.3s ease;
+}
+
+.dropdown-toggle:hover {
+    color: #ffdd57;
+}
+
+.profile-icon {
+    font-size: 1.5rem;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: white;
+    list-style: none;
+    padding: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    width: 200px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 1000;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Dropdown menu items */
+.dropdown-menu li {
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    transition: background 0.3s ease;
+}
+
+.dropdown-menu li a {
+    color: #333;
+    font-size: 1rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+/* Dropdown Icons */
+.dropdown-icon {
+    font-size: 1.2rem;
+    color: #007bff;
+    transition: color 0.3s ease;
+}
+
+.dropdown-menu li:hover {
+    background: #007bff;
+}
+
+.dropdown-menu li:hover a {
+    color: white;
+}
+
+.dropdown-menu li:hover .dropdown-icon {
+    color: white;
+}
+
+/* Login Section */
+.login-section {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.login-icon {
+    font-size: 1.5rem;
+    color: white;
+    margin-right: 8px;
+}
+
+.login-text {
+    font-size: 1.1rem;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Hover effect for login */
+.login-section:hover .login-text {
+    color: #ffdd57;
+}
+
+.login-section:hover .login-icon {
+    color: #ffdd57;
+}
