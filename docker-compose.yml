@@ -1,0 +1,18 @@
+version: '3.9'
+
+services:
+  backend:
+    build: ./backend
+    container_name: travelgo-backend
+    ports:
+      - "5000:5000"      # change 5000 to your backend port
+    restart: always
+
+  frontend:
+    build: ./frontend
+    container_name: travelgo-frontend
+    ports:
+      - "3000:3000"      # change 3000 to your frontend port
+    restart: always
+    depends_on:
+      - backend
